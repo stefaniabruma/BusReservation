@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FirmaTransport.iml" filepath="$PROJECT_DIR$/FirmaTransport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FirmaTransport.main.iml" filepath="$PROJECT_DIR$/.idea/modules/FirmaTransport.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FirmaTransport.test.iml" filepath="$PROJECT_DIR$/.idea/modules/FirmaTransport.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mpp-proiect-java-stefaniabruma.iml" filepath="$PROJECT_DIR$/.idea/mpp-proiect-java-stefaniabruma.iml" />
+    </modules>
+  </component>
+</project>
