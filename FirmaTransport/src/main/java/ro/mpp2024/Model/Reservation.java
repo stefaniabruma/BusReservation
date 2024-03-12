@@ -49,7 +49,7 @@ public class Reservation extends Entity<Long>{
     @Override
     public String toString() {
         return super.toString() +
-                ", route_id=" + route +
+                ", route=" + route +
                 ", seat_no=" + seat_no +
                 ", client_name='" + client_name + '\'';
     }
