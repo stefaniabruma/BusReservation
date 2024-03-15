@@ -26,7 +26,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
     @Override
     public void add(Reservation reservation) {
 
-        logger.traceEntry("saving task {}", reservation);
+        logger.traceEntry("saving reservation {}", reservation);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -51,7 +51,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
     @Override
     public void delete(Reservation reservation) {
 
-        logger.traceEntry("saving task {}", reservation);
+        logger.traceEntry("deleting reservation {}", reservation);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -61,7 +61,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
             preStmt.setLong(1, reservation.getId());
 
             int result = preStmt.executeUpdate();
-            logger.trace("Saving {} instances", result);
+            logger.trace("deleting {} instances", result);
 
         } catch (SQLException ex) {
             logger.error(ex);
@@ -75,7 +75,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
     @Override
     public void update(Reservation reservation, Long id) {
 
-        logger.traceEntry("update task {}", reservation);
+        logger.traceEntry("update reservation {}", reservation);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -101,7 +101,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
 
     @Override
     public Reservation findById(Long id) {
-        logger.traceEntry();
+        logger.traceEntry("Finding reservation by id {}", id);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -135,7 +135,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
 
     @Override
     public Iterable<Reservation> findAll() {
-        logger.traceEntry();
+        logger.traceEntry("Finding all reservations");
         Connection con = dbUtils.getConnection();
 
         List<Reservation> reservations = new ArrayList<>();
@@ -169,7 +169,7 @@ public class ReservationsDBRepository implements ReservationsRepository {
 
     @Override
     public Iterable<Reservation> findByRouteId(Long route_id) {
-        logger.traceEntry();
+        logger.traceEntry("Finding reservation by route id {}", route_id);
         Connection con = dbUtils.getConnection();
 
         List<Reservation> reservations = new ArrayList<>();

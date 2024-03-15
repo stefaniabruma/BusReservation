@@ -21,7 +21,7 @@ public class RoutesDBRepository implements RoutesRepository {
 
     @Override
     public void add(Route route) {
-        logger.traceEntry("saving task {}", route);
+        logger.traceEntry("saving route {}", route);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -47,7 +47,7 @@ public class RoutesDBRepository implements RoutesRepository {
     @Override
     public void delete(Route route) {
 
-        logger.traceEntry("saving task {}", route);
+        logger.traceEntry("deleting route {}", route);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -57,7 +57,7 @@ public class RoutesDBRepository implements RoutesRepository {
             preStmt.setLong(1, route.getId());
 
             int result = preStmt.executeUpdate();
-            logger.trace("Saving {} instances", result);
+            logger.trace("deleting {} instances", result);
 
         } catch (SQLException ex) {
             logger.error(ex);
@@ -70,7 +70,7 @@ public class RoutesDBRepository implements RoutesRepository {
     @Override
     public void update(Route route, Long id) {
 
-        logger.traceEntry("update task {}", route);
+        logger.traceEntry("update route {}", route);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -97,7 +97,7 @@ public class RoutesDBRepository implements RoutesRepository {
 
     @Override
     public Route findById(Long id) {
-        logger.traceEntry();
+        logger.traceEntry("Finding route by id {}", id);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -132,7 +132,7 @@ public class RoutesDBRepository implements RoutesRepository {
     @Override
     public Iterable<Route> findAll() {
 
-        logger.traceEntry();
+        logger.traceEntry("Finding all routes");
         Connection con = dbUtils.getConnection();
 
         List<Route> routes = new ArrayList<>();
@@ -166,7 +166,7 @@ public class RoutesDBRepository implements RoutesRepository {
 
     @Override
     public Route findRouteByDestinationDateTime(String destination, LocalDateTime dateTime) {
-        logger.traceEntry();
+        logger.traceEntry("Finding route by destination {} and datetime {}", destination, dateTime);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(

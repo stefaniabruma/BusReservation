@@ -26,7 +26,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
 
     @Override
     public Employee findByUsername(String username) {
-        logger.traceEntry();
+        logger.traceEntry("Finding employee by username {}", username);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -62,7 +62,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
     @Override
     public void add(Employee employee) {
 
-        logger.traceEntry("saving task {}", employee);
+        logger.traceEntry("saving employee {}", employee);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -85,7 +85,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
     @Override
     public void delete(Employee employee) {
 
-        logger.traceEntry("saving task {}", employee);
+        logger.traceEntry("deleting employees {}", employee);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -95,7 +95,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
             preStmt.setLong(1, employee.getId());
 
             int result = preStmt.executeUpdate();
-            logger.trace("Saving {} instances", result);
+            logger.trace("deleting {} instances", result);
 
         } catch (SQLException ex) {
             logger.error(ex);
@@ -108,7 +108,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
     @Override
     public void update(Employee employee, Long id) {
 
-        logger.traceEntry("update task {}", employee);
+        logger.traceEntry("updating employee {}", employee);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -133,7 +133,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
 
     @Override
     public Employee findById(Long id) {
-        logger.traceEntry();
+        logger.traceEntry("Finding employee by id {}", id);
         Connection con = dbUtils.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement(
@@ -166,7 +166,7 @@ public class EmployeesDBRepository implements EmployeesRepository{
 
     @Override
     public Iterable<Employee> findAll() {
-        logger.traceEntry();
+        logger.traceEntry("Finding all employees");
         Connection con = dbUtils.getConnection();
 
         List<Employee> employees = new ArrayList<>();
