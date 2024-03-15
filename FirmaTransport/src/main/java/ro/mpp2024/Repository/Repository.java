@@ -10,6 +10,4 @@ public interface Repository<T extends Entity<Tid>, Tid>  {
     void update(T elem, Tid id);
     T findById(Tid id);
     Iterable<T> findAll();
-    Collection<T> getAll();
-
 }

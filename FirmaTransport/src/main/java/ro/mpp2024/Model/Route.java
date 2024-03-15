@@ -10,6 +10,13 @@ public class Route extends Entity<Long>{
     private int no_available_seats;
     private int no_total_seats;
 
+    public Route(String destination, LocalDateTime departure_time, int no_available_seats, int no_total_seats) {
+        this.destination = destination;
+        this.departure_time = departure_time;
+        this.no_available_seats = no_available_seats;
+        this.no_total_seats = no_total_seats;
+    }
+
     public String getDestination() {
         return destination;
     }

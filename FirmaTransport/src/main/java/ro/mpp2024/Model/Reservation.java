@@ -8,6 +8,12 @@ public class Reservation extends Entity<Long>{
     private int seat_no;
     private String client_name = "-";
 
+    public Reservation(Route route, int seat_no, String client_name) {
+        this.route = route;
+        this.seat_no = seat_no;
+        this.client_name = client_name;
+    }
+
     public Route getRoute() {
         return route;
     }

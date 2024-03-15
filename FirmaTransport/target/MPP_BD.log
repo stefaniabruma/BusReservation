@@ -1,0 +1,16 @@
+15 Mar 2024 10:14:17,333 TRACE ro.mpp2024.Repository.EmployeesDBRepository 169 findAll - Enter
+15 Mar 2024 10:14:17,337 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2024 10:14:17,337 TRACE ro.mpp2024.Utils.JdbcUtils 25 getNewConnection - Enter
+15 Mar 2024 10:14:17,346 INFO  ro.mpp2024.Utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://localhost:3306/firma_transport
+15 Mar 2024 10:14:17,346 INFO  ro.mpp2024.Utils.JdbcUtils 31 getNewConnection - user: root
+15 Mar 2024 10:14:17,347 INFO  ro.mpp2024.Utils.JdbcUtils 32 getNewConnection - pass: mariadb
+15 Mar 2024 10:14:17,445 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@bb9e6dc)
+15 Mar 2024 10:14:17,458 TRACE ro.mpp2024.Repository.EmployeesDBRepository 195 findAll - Exit with([id=1, username='andrei_p', password='3a8f7b6c00a3d17deeefc1ef97f60fb7d062c3844dcf61eb6507b9724a1871e7'])
+15 Mar 2024 10:14:17,458 TRACE ro.mpp2024.Repository.RoutesDBRepository 135 findAll - Enter
+15 Mar 2024 10:14:17,458 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+15 Mar 2024 10:14:17,459 TRACE ro.mpp2024.Utils.JdbcUtils 25 getNewConnection - Enter
+15 Mar 2024 10:14:17,459 INFO  ro.mpp2024.Utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://localhost:3306/firma_transport
+15 Mar 2024 10:14:17,459 INFO  ro.mpp2024.Utils.JdbcUtils 31 getNewConnection - user: root
+15 Mar 2024 10:14:17,459 INFO  ro.mpp2024.Utils.JdbcUtils 32 getNewConnection - pass: mariadb
+15 Mar 2024 10:14:17,463 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@518caac3)
+15 Mar 2024 10:14:17,468 TRACE ro.mpp2024.Repository.RoutesDBRepository 163 findAll - Exit with([id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18])
