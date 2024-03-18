@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println(er.findByUsername("andrei_p"));
         System.out.println(rr.findAll());
-        System.out.println(rr.findRouteByDestinationDateTime("CLuj-Napoca", LocalDateTime.of(2024, 3, 22, 10, 0, 0)));
+        System.out.println(rr.findRouteByDestinationDateTime("Cluj-Napoca", LocalDateTime.of(2024, 3, 22, 10, 0, 0)));
         System.out.println(resr.findByRouteId(1L));
         Route route = new Route();
         route.setId(1L);

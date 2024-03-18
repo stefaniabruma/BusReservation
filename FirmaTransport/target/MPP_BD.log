@@ -260,3 +260,56 @@
 18 Mar 2024 09:08:28,705 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
 18 Mar 2024 09:08:28,706 TRACE ro.mpp2024.Repository.RoutesDBRepository 120 findById - Exit with(id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18)
 18 Mar 2024 09:08:28,707 TRACE ro.mpp2024.Repository.ReservationsDBRepository 166 findAll - Exit with([id=1, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=1, client_name='Daniel Paduraru', id=2, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=2, client_name='Daniel Paduraru', id=3, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=3, client_name='Daniel Paduraru', id=4, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=3, client_name='Daniel Paduraru', id=5, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=3, client_name='Daniel Paduraru'])
+18 Mar 2024 09:48:12,738 TRACE ro.mpp2024.Repository.EmployeesDBRepository 29 findByUsername - Enter Finding employee by username andrei_p
+18 Mar 2024 09:48:12,745 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:12,746 TRACE ro.mpp2024.Utils.JdbcUtils 25 getNewConnection - Enter
+18 Mar 2024 09:48:12,746 INFO  ro.mpp2024.Utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://localhost:3306/firma_transport
+18 Mar 2024 09:48:12,747 INFO  ro.mpp2024.Utils.JdbcUtils 31 getNewConnection - user: root
+18 Mar 2024 09:48:12,747 INFO  ro.mpp2024.Utils.JdbcUtils 32 getNewConnection - pass: mariadb
+18 Mar 2024 09:48:12,973 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@39d76cb5)
+18 Mar 2024 09:48:13,004 TRACE ro.mpp2024.Repository.EmployeesDBRepository 47 findByUsername - Exit with(id=1, username='andrei_p', password='3a8f7b6c00a3d17deeefc1ef97f60fb7d062c3844dcf61eb6507b9724a1871e7')
+18 Mar 2024 09:48:13,005 TRACE ro.mpp2024.Repository.RoutesDBRepository 135 findAll - Enter Finding all routes
+18 Mar 2024 09:48:13,005 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,005 TRACE ro.mpp2024.Utils.JdbcUtils 25 getNewConnection - Enter
+18 Mar 2024 09:48:13,006 INFO  ro.mpp2024.Utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://localhost:3306/firma_transport
+18 Mar 2024 09:48:13,006 INFO  ro.mpp2024.Utils.JdbcUtils 31 getNewConnection - user: root
+18 Mar 2024 09:48:13,007 INFO  ro.mpp2024.Utils.JdbcUtils 32 getNewConnection - pass: mariadb
+18 Mar 2024 09:48:13,015 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
+18 Mar 2024 09:48:13,026 TRACE ro.mpp2024.Repository.RoutesDBRepository 163 findAll - Exit with([id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18])
+18 Mar 2024 09:48:13,026 TRACE ro.mpp2024.Repository.RoutesDBRepository 169 findRouteByDestinationDateTime - Enter Finding route by destination Cluj-Napoca and datetime 2024-03-22T10:00
+18 Mar 2024 09:48:13,027 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,027 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
+18 Mar 2024 09:48:13,035 TRACE ro.mpp2024.Repository.RoutesDBRepository 189 findRouteByDestinationDateTime - Exit with(id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18)
+18 Mar 2024 09:48:13,036 TRACE ro.mpp2024.Repository.ReservationsDBRepository 172 findByRouteId - Enter Finding reservation by route id 1
+18 Mar 2024 09:48:13,036 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,037 TRACE ro.mpp2024.Utils.JdbcUtils 25 getNewConnection - Enter
+18 Mar 2024 09:48:13,037 INFO  ro.mpp2024.Utils.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:mariadb://localhost:3306/firma_transport
+18 Mar 2024 09:48:13,037 INFO  ro.mpp2024.Utils.JdbcUtils 31 getNewConnection - user: root
+18 Mar 2024 09:48:13,037 INFO  ro.mpp2024.Utils.JdbcUtils 32 getNewConnection - pass: mariadb
+18 Mar 2024 09:48:13,044 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@30c8681)
+18 Mar 2024 09:48:13,045 TRACE ro.mpp2024.Repository.RoutesDBRepository 100 findById - Enter Finding route by id 1
+18 Mar 2024 09:48:13,046 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,046 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
+18 Mar 2024 09:48:13,047 TRACE ro.mpp2024.Repository.RoutesDBRepository 120 findById - Exit with(id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18)
+18 Mar 2024 09:48:13,056 TRACE ro.mpp2024.Repository.ReservationsDBRepository 204 findByRouteId - Exit with([id=1, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=1, client_name='Daniel Paduraru', id=2, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=2, client_name='Daniel Paduraru'])
+18 Mar 2024 09:48:13,056 TRACE ro.mpp2024.Repository.ReservationsDBRepository 29 add - Enter saving reservation id=null, route=id=1, destination='null', departure_time=null, no_available_seats=0, no_total_seats=0, seat_no=3, client_name='Daniel Paduraru'
+18 Mar 2024 09:48:13,057 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,057 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@30c8681)
+18 Mar 2024 09:48:13,059 TRACE ro.mpp2024.Repository.ReservationsDBRepository 41 add - Saving 1 instances
+18 Mar 2024 09:48:13,059 TRACE ro.mpp2024.Repository.ReservationsDBRepository 47 add - Exit
+18 Mar 2024 09:48:13,060 TRACE ro.mpp2024.Repository.ReservationsDBRepository 138 findAll - Enter Finding all reservations
+18 Mar 2024 09:48:13,060 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,060 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@30c8681)
+18 Mar 2024 09:48:13,061 TRACE ro.mpp2024.Repository.RoutesDBRepository 100 findById - Enter Finding route by id 1
+18 Mar 2024 09:48:13,061 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,062 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
+18 Mar 2024 09:48:13,064 TRACE ro.mpp2024.Repository.RoutesDBRepository 120 findById - Exit with(id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18)
+18 Mar 2024 09:48:13,064 TRACE ro.mpp2024.Repository.RoutesDBRepository 100 findById - Enter Finding route by id 1
+18 Mar 2024 09:48:13,064 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,065 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
+18 Mar 2024 09:48:13,066 TRACE ro.mpp2024.Repository.RoutesDBRepository 120 findById - Exit with(id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18)
+18 Mar 2024 09:48:13,066 TRACE ro.mpp2024.Repository.RoutesDBRepository 100 findById - Enter Finding route by id 1
+18 Mar 2024 09:48:13,066 TRACE ro.mpp2024.Utils.JdbcUtils 48 getConnection - Enter
+18 Mar 2024 09:48:13,066 TRACE ro.mpp2024.Utils.JdbcUtils 57 getConnection - Exit with(org.mariadb.jdbc.Connection@5b3f61ff)
+18 Mar 2024 09:48:13,068 TRACE ro.mpp2024.Repository.RoutesDBRepository 120 findById - Exit with(id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18)
+18 Mar 2024 09:48:13,069 TRACE ro.mpp2024.Repository.ReservationsDBRepository 166 findAll - Exit with([id=1, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=1, client_name='Daniel Paduraru', id=2, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=2, client_name='Daniel Paduraru', id=6, route=id=1, destination='Cluj-Napoca', departure_time=2024-03-22T10:00, no_available_seats=18, no_total_seats=18, seat_no=3, client_name='Daniel Paduraru'])
