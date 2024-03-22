@@ -1,13 +1,18 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 group = 'ro.mpp2024'
 version = '1.0-SNAPSHOT'
 
+javafx {
+    modules = [ 'javafx.controls' , 'javafx.fxml']
+}
+
 application{
-    mainClass = 'ro.mpp2024.Main'
+    mainClass = 'ro.mpp2024.FXMain'
 }
 
 repositories {

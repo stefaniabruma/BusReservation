@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="572.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp2024.AppWindowController">
+    <children>
+        <Label layoutX="248.0" layoutY="26.0" text="Welcome back!" />
+        <Label layoutX="262.0" layoutY="44.0" text="All routes:" />
+        <TableView fx:id="TableViewRoutes" layoutX="33.0" layoutY="81.0" prefHeight="210.0" prefWidth="529.0">
+            <columns>
+                <TableColumn fx:id="TableColumnDestination" prefWidth="163.20001983642578" text="Destination" />
+                <TableColumn fx:id="TableColumnDepartureTime" prefWidth="126.39996337890625" text="Departure Time" />
+                <TableColumn fx:id="TableColumnAvailable" prefWidth="132.0" text="No. of available seats" />
+                <TableColumn fx:id="TableColumnTotal" prefWidth="107.99996948242188" text="Total no. of seats" />
+            </columns>
+        </TableView>
+        <Label layoutX="37.0" layoutY="315.0" text="Search seats for: " />
+        <TextField fx:id="TextFieldDestination" layoutX="139.0" layoutY="311.0" promptText="Destination" />
+        <TextField fx:id="TextFieldDepartureTime" layoutX="316.0" layoutY="311.0" promptText="Departure Time" />
+        <Button layoutX="511.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+        <TableView fx:id="TableViewReservations" layoutX="37.0" layoutY="358.0" prefHeight="176.0" prefWidth="206.0">
+            <columns>
+                <TableColumn fx:id="TableColumnSeatNo" prefWidth="56.000003814697266" text="Seat No." />
+                <TableColumn fx:id="TableColumnClientName" prefWidth="148.80000915527344" text="Client_Name" />
+            </columns>
+        </TableView>
+        <Label layoutX="268.0" layoutY="369.0" text="Reserve                        for:" />
+        <TextField fx:id="TextFieldNoSeats" layoutX="316.0" layoutY="365.0" prefHeight="26.0" prefWidth="65.0" promptText="No. Seats" />
+        <TextField fx:id="TextFieldClientName" layoutX="411.0" layoutY="364.0" prefHeight="26.0" prefWidth="150.0" promptText="Client Name" />
+        <Button layoutX="503.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleReserve" text="Reserve" />
+        <Button layoutX="501.0" layoutY="495.0" mnemonicParsing="false" onAction="#handleLogOut" text="Log Out" />
+        <Label layoutX="391.0" layoutY="499.0" text="See you next time!" />
+    </children>
+</AnchorPane>
