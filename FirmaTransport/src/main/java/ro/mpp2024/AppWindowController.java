@@ -121,7 +121,7 @@ public class AppWindowController {
         String client_name = TextFieldClientName.getText();
 
         if(client_name.equals("")){
-            GUIMessage.showMessage(stage, Alert.AlertType.ERROR, "Error", "Please provide a client name!");
+            GUIMessage.showMessage(stage, Alert.AlertType.ERROR, "Error", "Please provide the name of the client!");
             return;
         }
 
