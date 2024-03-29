@@ -15,9 +15,9 @@ import java.util.stream.StreamSupport;
 
 public class Service implements ServiceFirmaTransport{
 
-    EmployeesRepository repo_employee;
-    RoutesRepository repo_route;
-    ReservationsRepository repo_res;
+    private EmployeesRepository repo_employee;
+    private RoutesRepository repo_route;
+    private ReservationsRepository repo_res;
 
     public Service(EmployeesRepository repo_employee, RoutesRepository repo_route, ReservationsRepository repo_res) {
         this.repo_employee = repo_employee;
